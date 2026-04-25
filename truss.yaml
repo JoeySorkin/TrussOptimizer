@@ -1,0 +1,52 @@
+# =============================================================================
+#  EK301 Truss Input — edit this file, then run: python main.py truss8j_v2.yaml
+# =============================================================================
+
+# Joint x/y coordinates (inches), one entry per joint (1-indexed labels)
+joints:
+  j1: [0.0, 0.0]
+  j2: [26.0, 0.0]
+  j3: [11.0, 0.0]
+  j4: [18.5, 0.0]
+  j5: [23.0, 6.0]
+  j6: [17.0, 7.0]
+  j7: [9.0, 7.0]
+  j8: [3.0, 6.0]
+
+# Members — each entry is [joint_a, joint_b] (1-indexed)
+members:
+  - [1, 3] # m1
+  - [3, 4] # m2
+  - [2, 4] # m3
+  - [2, 5] # m4
+  - [4, 5] # m5
+  - [5, 6] # m6
+  - [4, 6] # m7
+  - [3, 6] # m8
+  - [6, 7] # m9
+  - [3, 7] # m10
+  - [7, 8] # m11
+  - [3, 8] # m12
+  - [1, 8] # m13
+
+# Support and load joints (1-indexed)
+pin_joint: 1
+roller_joint: 2
+load_joint: 3
+
+# Applied downward load (oz)
+load_oz: 32.0
+
+# Search mode: QUICK | NORMAL | DEEP
+#   QUICK  — 1 seed,  1000 iters  (~30 sec)
+#   NORMAL — 3 seeds, 2500 iters  (a few minutes)
+#   DEEP   — 6 seeds, 5000 iters  (best results, slowest)
+search_mode: Normal
+
+# Parallel seed runs: true | false
+#   true  — all seeds run simultaneously (faster, but no live console output)
+#   false — seeds run one at a time with live progress printed (more interesting)
+parallel: false
+
+# Stock pieces available for cutting (inches)
+stock: [48, 48, 24]
