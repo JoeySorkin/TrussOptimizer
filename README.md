@@ -143,9 +143,9 @@ console output) or **in parallel** across CPU cores (faster, but silent during
 the run). This is controlled by the `parallel` flag in the YAML.
 
 ```
-FIXED TOPOLOGY (C matrix)
-│
-▼
+    FIXED TOPOLOGY (C matrix, initial XY)
+                    │
+                    ▼
 ┌─────────────────────────────────────────────┐
 │           Differential Evolution            │
 │  population of candidate joint vectors      │
@@ -153,13 +153,13 @@ FIXED TOPOLOGY (C matrix)
 │    • hard constraint penalties              │
 │    • maximize W_max / cost                  │
 │    • simultaneous-failure penalty (λ·CV)    │
-│  mutate → crossover → select → repeat       │
+│    mutate → crossover → select → repeat     │
 └───────────────────┬─────────────────────────┘
                     │  best solution per seed
                     ▼
 ┌─────────────────────────────────────────────┐
 │             L-BFGS-B polish                 │
-│  gradient-based fine-tuning                 │
+│        gradient-based fine-tuning           │
 └───────────────────┬─────────────────────────┘
                     │
                     ▼
