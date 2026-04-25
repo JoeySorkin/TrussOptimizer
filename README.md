@@ -260,6 +260,4 @@ compression members buckle at approximately the same load.
 
 **Separating topology from geometry simplifies the problem.** Fixing topology
 and optimizing geometry turns a discontinuous combinatorial problem into a
-continuous one that DE + L-BFGS-B handles well. Searching topologies by hand
-with geometric intuition as a guide proved to be an effective division of
-labor between engineer and computer.
+continuous one that DE + L-BFGS-B handles well. I attempted to generate truss topologies as well, automating the whole pipeline, but this proved difficult. Our intution seemed sufficient for seed topologies, while tiny adjustments in joint positions would've been tedious.
