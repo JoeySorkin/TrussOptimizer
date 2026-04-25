@@ -23,7 +23,7 @@ topology — the computer handles the rest.
 
 ![8-joint optimization result](Figures/Figure_2.png)
 
-** Final Design ** - for our project, we opted for the 8-joint design, which end up holding ~ 116oz, achieving a 0.64 oz/$ ratio.
+**Final Design** - for our project, we opted for the 8-joint design, which end up holding ~ 116oz, achieving a 0.64 oz/$ ratio.
 
 ## ![Final design](Figures/Figure_3.png)
 
